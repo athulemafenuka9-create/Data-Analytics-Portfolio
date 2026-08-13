@@ -11,3 +11,10 @@ An end-to-end technical data analysis project demonstrating proficiency in relat
 1. **`Corporate_Database_Queries.sql`**: Relational server schema scripts tracking employee records.
 2. **`Executive_Salary_Dashboard.pbix`**: Interactive corporate reporting layout highlighting core department performance KPIs.
 3. **`Employee_Payroll_Analysis.xlsx`**: Automated tracking spreadsheet utilizing advanced relational logic matrices.
+### 🐍 Python Data Cleaning & Exploratory Data Analysis (EDA)
+**Project File:** `online-sales-dataset.ipynb`
+* Data cleaning and validation on retail sales data using **Pandas** and **NumPy**.
+* Identified zero duplicate records and zero missing/null values across all columns.
+* Converted string date fields into standardized `datetime` objects for time-series analysis.
+* Evaluated transaction statistics, categorical frequencies, and payment method distributions.
+* Exported the processed dataset into a structured CSV format (`Cleaned_Online_Sales_Data.csv`).
