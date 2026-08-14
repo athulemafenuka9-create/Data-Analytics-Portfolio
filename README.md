@@ -18,3 +18,4 @@ An end-to-end technical data analysis project demonstrating proficiency in relat
 * Converted string date fields into standardized `datetime` objects for time-series analysis.
 * Evaluated transaction statistics, categorical frequencies, and payment method distributions.
 * Exported the processed dataset into a structured CSV format (`Cleaned_Online_Sales_Data.csv`).
+* Created Seaborn bar chart visualizations to analyze total revenue distribution across product categories.
