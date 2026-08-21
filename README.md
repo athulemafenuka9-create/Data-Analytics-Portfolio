@@ -19,3 +19,44 @@ An end-to-end technical data analysis project demonstrating proficiency in relat
 * Evaluated transaction statistics, categorical frequencies, and payment method distributions.
 * Exported the processed dataset into a structured CSV format (`Cleaned_Online_Sales_Data.csv`).
 * Created Seaborn bar chart visualizations to analyze total revenue distribution across product categories.
+# 📊 Online Sales Data Analytics & Executive Dashboard
+
+## 📌 Project Overview
+This project presents an end-to-end data analytics workflow built in **Microsoft Excel**. It transforms raw e-commerce transaction logs into a structured data pipeline, complete with feature engineering, automated KPI calculations, and an interactive executive dashboard.
+
+---
+
+## 🛠️ Key Technical Highlights & Methodology
+
+1. **Data Auditing & Cleaning:**
+   - Standardized column data types (Currency, Short Date, Integer).
+   - Validated data integrity across 230+ order records.
+
+2. **Feature Engineering & Formulas:**
+   - **Month Extraction (`Column K`):** Extracted 3-letter month abbreviations using `=TEXT([@Date], "Mmm")`.
+   - **Customer Tiering (`Column L`):** Segmented order sizes using nested logic:
+     ```excel
+     =IF([@[Total Revenue]]>=1000, "High Value", IF([@[Total Revenue]]>=200, "Medium Value", "Low Value"))
+     ```
+
+3. **KPI Summary Block:**
+   - **Total Revenue:** `$80,567.85` (`=SUM(H:H)`)
+   - **Total Orders:** `239` (`=COUNTA(A:A)-1`)
+   - **Average Order Value:** `$335.70` (`=AVERAGE(H:H)`)
+
+4. **Executive Dashboard & Visualizations:**
+   - Summarized category metrics via **Pivot Tables**.
+   - Created a **2D Clustered Column Chart** to highlight high-performing segments.
+   - Built an interactive **Region Slicer** (North America, Europe, Asia) for real-time dynamic filtering.
+   - Linked dynamic header KPI cards directly from underlying calculations (`=Data!O2`, `=Data!O4`).
+
+---
+
+## 📈 Key Business Insights
+- **Electronics** was the top-performing category, driving **$34,982.41** (over 43% of total revenue).
+- **Home Appliances** and **Sports** were strong secondary drivers at **$18,646.16** and **$14,326.52**.
+- High-value transactions ($\ge \$1,000$) represent the primary target for retention strategies.
+
+---
+
+## 📁 Repository Structure
