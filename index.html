@@ -1,20 +1,57 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Athule Mafenuka Portfolio</title>
+<title>Athule Mafenuka | Data Analyst</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+ body{font-family:system-ui,Arial;max-width:900px;margin:0 auto;padding:20px;line-height:1.6;color:#222}
+ h1{font-size:32px;margin-bottom:5px} .sub{color:#666;margin-bottom:25px}
+ .card{border:1px solid #e5e7eb;border-radius:16px;padding:20px;margin:20px 0;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+ .btn{display:inline-block;background:#111;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;margin:5px 5px 0}
+ .grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+ @media(max-width:600px){.grid{grid-template-columns:1fr}}
+ table{border-collapse:collapse;width:100%} th,td{border:1px solid #ddd;padding:8px;font-size:14px} th{background:#f9fafb}
+ iframe{width:100%;height:500px;border:1px solid #ddd;border-radius:8px}
+</style>
 </head>
-<body style="font-family:Arial;padding:20px">
-<h1>Athule Mafenuka - Data Analytics Portfolio</h1>
-<p><a href="README.md">README + Tables</a></p>
-<p><a href="Sales_Dashboard.pdf">Sales_Dashboard.pdf</a></p>
-<p><a href="Corporate_Database_Queries.sql">Corporate Database</a></p>
-<p><a href="Employee_Payroll_Analysis.sql">Employee Payroll</a></p>
-<p>Your cleaned files and dashboards are in the repo file list above.</p>
-<h2>Live Files:</h2>
+<body>
+<h1>Athule Mafenuka</h1>
+<div class="sub">Data Analyst | SQL • Excel • Power BI • Python | Johannesburg, SA</div>
+
+<div class="card">
+<p>Corporate Data Analytics portfolio focused on payroll analysis, sales performance, and executive dashboards. All projects built from real-world cleaning + analysis.</p>
+<a class="btn" href="https://github.com/athulemafenuka9-create/Data-Analytics-Portfolio">View Code on GitHub</a>
+<a class="btn" href="Sales_Dashboard.pdf" style="background:#fff;color:#111;border:1px solid #111">Open Sales PDF</a>
+</div>
+
+<div class="grid">
+<div class="card"><h3>📊 Sales Dashboard</h3><p>Online sales KPIs, cleaned data</p><a href="Online_Sales_Dashboar...">View Dashboard</a></div>
+<div class="card"><h3>💰 Employee Payroll</h3><p>Payroll anomaly detection in SQL</p><a href="Employee_Payroll_Anal...">View Queries</a></div>
+<div class="card"><h3>🏢 Corporate Database</h3><p>Database design & reporting</p><a href="Corporate_Database_Q...">View Queries</a></div>
+<div class="card"><h3>👔 Executive Salary</h3><p>Salary benchmarking</p><a href="Executive_Salary_Dash...">View Dashboard</a></div>
+</div>
+
+<div class="card">
+<h2>Cleaned Data Samples</h2>
+<p><a href="cleaned_Online_Sales_...">cleaned_Online_Sales 1</a> | <a href="cleaned_online_sales_q...">cleaned queries</a></p>
+<p>Before/After cleaning preview — shows data quality work recruiters look for.</p>
+</div>
+
+<div class="card">
+<h2>Project Documentation (README)</h2>
+<div id="readme">Loading tables...</div>
+</div>
+
+<div class="card">
+<h2>Sales Dashboard PDF</h2>
+<iframe src="Sales_Dashboard.pdf"></iframe>
+</div>
+
 <script>
-fetch('./').then(r=>r.text()).then(d=>{document.body.innerHTML+=d});
+fetch('README.md').then(r=>r.text()).then(t=>{document.getElementById('readme').innerHTML=marked.parse(t)})
 </script>
 </body>
 </html>
